@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        input {
+            width: 85%;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        label {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body class="bg-cyan-600">
+    <div class="h-96 w-80 m-auto mt-28 bg-white rounded p-5">
+        <h1 class="text-3xl font-bold text-cyan-600 text-center">Form</h1>
+        <form class="text-center" action="">
+            <br>
+            <input oninput="checkPassword()" id="password" type="password" placeholder="Enter password">
+            <span style="display: none;" id="errorForPassword" class="text-xs text-red-500">Your password is less then 6 chars!</span>
+            <br>
+
+            <input type="number" placeholder="Enter number" id="numberpleace" oninput="cheakNumber()">
+            <span id="errorNumber" class=" text-xs text-red-300" style ="display: none;" >Your number is less then 11 chars!</span>
+            <br>
+            <input id="emailpleace" type="email" placeholder="Enter Email" oninput="cheakEmail()">
+            <span id="erroremail" class="text-xs text-red-300" style ="display: none;">Incorrect Email</span>
+            <br>
+            <input class="submit w-20 mt-4 bg-cyan-600" type="submit">
+
+        </form>
+    </div>
+
+
+    <script src="App.js"></script>
+</body>
+
+</html>
